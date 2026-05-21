@@ -1,6 +1,6 @@
 # CICD using GitHub actions
 
-name: CI/CD
+name: CI/CD #Workflow name
 
 # Exclude the workflow to run on changes to the helm chart
 on:
@@ -42,7 +42,7 @@ jobs:
     - name: Run golangci-lint #common for go lang for Static code analysis. it is for linting
       uses: golangci/golangci-lint-action@v6
       with:
-        version: v1.56.2
+        version: v1.64.8
   
   push:
     runs-on: ubuntu-latest #add again 
